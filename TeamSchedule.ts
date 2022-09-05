@@ -14,9 +14,9 @@ let participants: objectinterface[]=[{Name:"raama",Id:"TTWC1",Rank:1,NomberOfMat
                 {Name:"ravi",Id:"TTWC6",Rank:7,NomberOfMatch:210}];
 //-----------------findLeaguesMatches------------------ 
 function findLeaguesMatches(){
-    let leaguesSchedule=[];
+    let leaguesSchedule:any=[];
     for(let i=0;i<participants.length/2;i++){
-        let leaguesSchedules={"firstPlayerID":participants[i].Id,
+        let leaguesSchedules:any={"firstPlayerID":participants[i].Id,
                                "firstPlayer":participants[i].Name,
                                "firstPlayerRank":participants[i].Rank,
                                "secondPlayerID":participants[participants.length-1-i].Id,
@@ -28,16 +28,16 @@ function findLeaguesMatches(){
 }
 //-----------------findQualifier-----------------------
 function findQualifier(){
-    let Qualifier=[];
+    let Qualifier:any=[];
     let findLeaguesMatch=findLeaguesMatches()
     for(let i=0;i<findLeaguesMatch.length;i++){
         if(i%2==0){
-            let Qualifiers={"leagueMatchID":findLeaguesMatch[i].firstPlayerID,
+            let Qualifiers:any={"leagueMatchID":findLeaguesMatch[i].firstPlayerID,
                             "leagueMatchWinner":findLeaguesMatch[i].firstPlayer,
                             "leagueMatchWinnerRank":findLeaguesMatch[i].firstPlayerRank,};
               Qualifier.push(Qualifiers); 
         }else{
-            let Qualifiers={"leagueMatchID":findLeaguesMatch[i].firstPlayerID,
+            let Qualifiers:any={"leagueMatchID":findLeaguesMatch[i].firstPlayerID,
                             "leagueMatchWinner":findLeaguesMatch[i].firstPlayer,
                             "leagueMatchWinnerRank":findLeaguesMatch[i].firstPlayerRank};
              Qualifier.push(Qualifiers); 
@@ -47,7 +47,7 @@ function findQualifier(){
 }
 //-----------------findQualifierMatches----------------
 function findQualifierMatches(){
-    let QualifierSchedule=[];
+    let QualifierSchedule:any=[];
     let findQualifiers=findQualifier()
      for(let i=0;i<findQualifiers.length;i+=2){
         let QualifierSchedules={"firstPlayer":findQualifiers[i].leagueMatchWinner,
@@ -60,7 +60,7 @@ function findQualifierMatches(){
 }
 //-----------------findSemiFinalist--------------------
 function findSemiFinalist(){
-    let semiFinalist=[]
+    let semiFinalist:any=[]
     let findQualifierMatch=findQualifierMatches()
     for(let i=0;i<findQualifierMatch.length;i++){
         if( i%2==0){
@@ -77,7 +77,7 @@ function findSemiFinalist(){
 }
 //----------------findSemiFinalMatches-----------------
 function findSemiFinalMatches(){
-    let SemiFinalSchedule=[];
+    let SemiFinalSchedule:any=[];
     let semiFinalist=findSemiFinalist()
      for(let i=0;i<semiFinalist.length;i+=2){
         let SemiFinalSchedules={"firstPlayer":semiFinalist[i].leagueMatchWinner,
@@ -90,7 +90,7 @@ function findSemiFinalMatches(){
 }
 //----------------findFinalist-------------------------
 function findFinalist(){
-    let Finalist=[]
+    let Finalist:any=[]
     let findSemiFinalMatch=findSemiFinalMatches()
     for(let i=0;i<findSemiFinalMatch.length;i++){
         if( i%2==0){
@@ -107,7 +107,7 @@ function findFinalist(){
 }findFinalist()
 //----------------findFinalMatch-----------------------
 function findFinalMatch(){
-    let finalSchedule=[];
+    let finalSchedule:any=[];
     let findFinalists=findFinalist()
     for(let i=0;i<findFinalists.length;i+=2){
         let finalSchedules={"firstPlayer":findFinalists[i].leagueMatchWinner,
