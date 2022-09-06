@@ -7,11 +7,11 @@ interface objectinterface{
 let participants: objectinterface[]=[{Name:"raama",Id:"TTWC1",Rank:1,NumberOfMatch:520},
                 {Name:"rithi",Id:"TTWC2",Rank:2,NumberOfMatch:240},
                 {Name:"tamil",Id:"TTWC3",Rank:3,NumberOfMatch:200},
-                {Name:"karthi",Id:"TTWC4",Rank:9,NumberOfMatch:999},
-                {Name:"srini",Id:"TTWC5",Rank:4,NumberOfMatch:250},
-                {Name:"siva",Id:"TTWC6",Rank:5,NumberOfMatch:350},
-                {Name:"kamal",Id:"TTWC7",Rank:6,NumberOfMatch:240},
-                {Name:"ravi",Id:"TTWC6",Rank:7,NumberOfMatch:210}];
+                {Name:"karthi",Id:"TTWC4",Rank:4,NumberOfMatch:999},
+                {Name:"srini",Id:"TTWC5",Rank:5,NumberOfMatch:250},
+                {Name:"siva",Id:"TTWC6",Rank:6,NumberOfMatch:350},
+                {Name:"kamal",Id:"TTWC7",Rank:7,NumberOfMatch:240},
+                {Name:"ravi",Id:"TTWC6",Rank:8,NumberOfMatch:210}];
 //-----------------findLeaguesMatches------------------ 
 function findLeaguesMatches(){
     let leaguesSchedule:any=[];
